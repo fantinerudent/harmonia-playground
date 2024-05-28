@@ -10,3 +10,9 @@ create table item (
   user_id int unsigned not null,
   foreign key(user_id) references user(id)
 );
+
+create table song (
+  id int unsigned primary key auto_increment not null,
+  title varchar(255) not null,
+  genre  varchar(255) not null
+);
