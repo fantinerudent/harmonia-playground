@@ -14,7 +14,7 @@ class ItemSeeder extends AbstractSeeder {
 
   run() {
     // Generate and insert fake data into the 'item' table
-    for (let i = 0; i < 10; i += 1) {
+    for (let i = 0; i < 100; i += 1) {
       // Generate fake item data
       const fakeItem = {
         title: this.faker.lorem.word(), // Generate a fake title using faker library
