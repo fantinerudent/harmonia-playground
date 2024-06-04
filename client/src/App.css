@@ -1,165 +1,97 @@
-body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.7;
-  color: #eee;
-  margin: 0;
+#feedback-form {
+  width: 280px;
+  margin: 0 auto;
+  background-color: #fcfcfc;
+  padding: 20px 50px 40px;
+  box-shadow: 1px 4px 10px 1px #aaa;
+  font-family: sans-serif;
 }
 
-.container {
-  height: 100vh;
-  background-image: url("./assets/images/background.webp");
-  background-size: cover;
-  background-position: top;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 30px;
+#feedback-form * {
+  box-sizing: border-box;
 }
 
-.logo {
-  font-size: 20px;
-  margin-top: 16px;
-}
-
-.navbar ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: #eee;
-  display: flex;
-  gap: 5px;
-  justify-content: end;
-  margin-top: auto;
-  font-size: 15px;
-}
-
-.navbar a:hover {
-  scale: 110%;
-}
-
-.text-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+#feedback-form h2 {
   text-align: center;
-}
-
-.block-primary {
-  text-transform: uppercase;
   margin-bottom: 30px;
 }
 
-.block-primary-main {
-  font-size: 50px;
-  font-weight: 400;
-  letter-spacing: 5px;
-  animation: blink 12s infinite;
+#feedback-form input {
+  margin-bottom: 15px;
 }
 
-.block-primary-sub {
+#feedback-form input[type="text"] {
   display: block;
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: 7px;
+  height: 32px;
+  padding: 6px 16px;
+  width: 100%;
+  border: none;
+  background-color: #f3f3f3;
 }
 
-.btn:link,
-.btn:visited {
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 10px 20px;
-  display: inline-block;
-  border-radius: 100px;
-  transition: all 0.2s;
-  position: relative;
+#feedback-form input[type="email"] {
+  display: block;
+  height: 32px;
+  padding: 6px 16px;
+  width: 100%;
+  border: none;
+  background-color: #f3f3f3;
 }
 
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+#feedback-form input[type="password"] {
+  display: block;
+  height: 32px;
+  padding: 6px 16px;
+  width: 100%;
+  border: none;
+  background-color: #f3f3f3;
 }
 
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.btn-white {
-  background-color: #fff;
+#feedback-form label {
   color: #777;
-  font-size: 14px;
+  font-size: 0.8em;
 }
 
-footer {
-  position: absolute;
-  top: 85%;
-  left: 75%;
+#feedback-form input[type="checkbox"] {
+  float: left;
 }
 
-.wcs {
-  text-decoration: none;
-  color: #ff1493ad;
+#feedback-form input:not(:checked) + #feedback-phone {
+  height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
-.wcs:hover {
-  border-bottom: solid 1px #ff1493ad;
+#feedback-form #feedback-phone {
+  transition: 0.3s;
 }
 
-@media screen and (max-width: 760px) {
-  .logo {
-    display: none;
-  }
+#feedback-form button[type="submit"] {
+  display: block;
+  margin: 20px auto 0;
+  width: 150px;
+  height: 40px;
+  border-radius: 25px;
+  border: none;
+  color: #eee;
+  font-weight: 700;
+  box-shadow: 1px 4px 10px 1px #aaa;
 
-  .container {
-    justify-content: center;
-  }
-
-  footer {
-    position: absolute;
-    top: 85%;
-    left: 20%;
-  }
-}
-
-@media screen and (min-width: 761px) and (max-width: 960px) {
-  footer {
-    position: absolute;
-    top: 85%;
-    left: 60%;
-  }
-}
-
-@keyframes blink {
-  20%,
-  24%,
-  55% {
-    color: #111;
-    text-shadow: none;
-  }
-  0%,
-  19%,
-  21%,
-  23%,
-  25%,
-  54%,
-  56%,
-  100% {
-    text-shadow:
-      0 0 5px #ff1493ad,
-      0 0 15px #eee,
-      0 0 20px #ff1493ad,
-      0 0 40px #a00ac9,
-      0 0 60px #ff0000,
-      0 0 10px #970dc5,
-      0 0 98px #ff0000;
-    color: #fff;
-  }
+  background: #207cca; /* Old browsers */
+  background: -moz-linear-gradient(
+    left,
+    #207cca 0%,
+    #9f58a3 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    left,
+    #207cca 0%,
+    #9f58a3 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to right,
+    #207cca 0%,
+    #9f58a3 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#207cca', endColorstr='#9f58a3',GradientType=1 ); /* IE6-9 */
 }
