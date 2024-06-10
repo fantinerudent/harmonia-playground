@@ -74,9 +74,9 @@ const createStudent = async (req, res) => {
       `insert into student ( email, lastname, firstname, password) values (?, ?, ?, ?)`,
       [email, lastname, firstname, password]
     );
-    res.json(result.insertId);
+    res.json(`Student ajouté numéro => ${result.insertId}`);
   } catch (error) {
-    res.json(error);
+    res.json(`error: ${error}`);
   }
 };
 
